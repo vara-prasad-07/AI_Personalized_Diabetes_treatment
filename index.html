@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <link rel="stylesheet" href="style/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  
+  
+  
+  
+  
+</head>
+<body class="container">
+      <aside class="aside" id="aside">
+           
+        <div class="right">
+
+          <div class="top">
+            <div class="profile">
+              <div class="profile-photo">
+                <img src="https://png.pngtree.com/png-vector/20190802/ourmid/pngtree-patient-user-injured-hospital-flat-color-icon-vector-icon-png-image_1645907.jpg" style="background-color: white;" alt=""/>
+              </div>
+              <div class="info">
+                  <p class="profilename" id="profilename"></p>
+                  <p class="rolename" id="rolename"></p>
+                  <small class="text-muted"></small>
+              </div>
+           </div>
+          
+             
+          </div>
+          
+            
+          </div>
+         <!-- end top -->
+          <div class="sidebar">
+
+            <a href="#" class="active1" id="homebtn">
+              <span class="material-symbols-sharp">home</span>
+              <h3 style="color: white;">Home</h3>
+           </a>
+           <a href="#" class="active1" id="aitreatment">
+            <span class="material-symbols-sharp">insights</span>
+            <h3 style="color: white;" >AI_treatment</h3>
+         </a>
+            <a href="#" class="active1" id="dashboard">
+              <span class="material-symbols-sharp">grid_view </span>
+              <h3 style="color: white;">Dashboard</h3>
+           </a>
+           <a href="#" class="active1" id="reports">
+            <span class="material-symbols-sharp">person_outline</span>
+            <h3 style="color: white;">Reports</h3>
+           </a>
+           <a href="#" class="active1" id="reports">
+            <span class="material-symbols-sharp">settings</span>
+            <h3 style="color: white;">Settings</h3>
+           </a>
+           
+          
+             
+
+
+          </div>
+
+      </aside>
+      <!-- --------------
+        end asid
+      -------------------- -->
+
+      <!-- --------------
+        start main part
+      --------------- -->
+     
+        
+      <div class="maincotainer">
+
+      <main class="home" id="home">
+        <div class="homemain">
+        <div>
+          <div class="homecard1">
+            <h5 class="welcomename">Welcome, <span class="username2" style="color: red;" id="username2"></span></h5>
+            <p class="datetime" id="datetime">31st mar 2025</p>
+          </div>
+          <div class="homecard2">
+            <p class="pagedescription">Manage your test results, get personalized treatment recommendations, and track your progress—all in one place.</p>
+          </div>
+          <div class="homecard3align">
+            
+          
+          <div class="homecard3 animate-left" id="box1">
+            <h1 class="describeai">What is AI Treatment?</h1>
+            <p class="describeaipara">It is a personalized health care tool that recommends treatments based on your EHR data</p>
+            <div class="buttonright">
+              <button class="aitreatmentbtn" id="getit">Get started ></button>
+            </div>
+            
+          </div>
+          <div class="homecard3dup animate-righ" id="box2">
+            <h1 class="describeai">What is Dashboard?</h1>
+            <p class="describeaipara">It is a a visual display of your EHR data for key insights</p>
+            <div class="buttonright">
+              <button class="aitreatmentbtn" style="margin-top:44px;" id="viewdashboardbtn">View dashboard ></button>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top: 60px;">
+          <h1  class="peopletrust">People who trust us:</h1>
+        <div class="homecard4">
+          <div>
+            <p class="noofpateints">No of Pateints</p>
+            <span class="patientscount" id="patientscount">0</span>
+          </div>
+          <div>
+            <p class="noofdoctors">No of doctors</p>
+            <span class="doctorcount" id="doctorcount">0</span>
+          </div>
+          <div style="margin-right: 20px;">
+            <p class="noofhospitals">no of hospitals</p>
+            <span class="hospitalcount" id="hospitalcount">0</span>
+          </div>
+        </div>
+        </div>
+        </div>
+        
+        
+        <div class="howtouse">
+          <h1>HOW TO USE</h1>
+          <div class="timeline">
+            <div class="containersteps leftsteps">
+              <div class="timeline-item">
+                <span class="material-symbols-sharp">storage</span>
+                <h3>Step 1</h3>
+                <p>Upload your EHR data and get presonalized treatment recommendation</p>
+              </div>
+            </div>
+            <div class="containersteps rightsteps">
+              <div class="timeline-item">
+                <span class="material-symbols-sharp">dashboard</span>
+                <h3>Step 2</h3>
+                <p>View visual dashboard for insights and alerts</p>
+              </div>
+            </div>
+            <div class="containersteps leftsteps">
+              <div class="timeline-item">
+                <span class="material-symbols-sharp">report</span>
+                <h3>Step 3</h3>
+                <p>Download your AI-Report in different formats</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </main>
+      <main class="dashboardmain" id="dashboardmain">
+           <h1>Dashbord</h1>
+
+           <div class="date">
+             <p  class="latestupdate">Lastest Update: <span id="latestupdate"></span></p>
+           
+
+        <div class="insights">
+
+           <!-- start seling -->
+            <div class="sales">
+               <span class="material-symbols-sharp">trending_up</span>
+               <div class="middle">
+
+                 <div class="left">
+                   <h3>Glucose level (mg/dL)</h3>
+                  
+                 </div>
+                  <div >
+                    <h1 id="glucoselevel"></h1>
+                  </div>
+
+               </div>
+               <small>Last 24 Hours</small>
+               <p id="glucosewm" class="warning"></p>
+            </div>
+           <!-- end seling -->
+              <!-- start expenses -->
+              <div class="expenses">
+                <span class="material-symbols-sharp">hematology</span>
+                <div class="middle">
+ 
+                  <div class="left">
+                    <h3>HbA1c %</h3>
+                   
+                  </div>
+                   <div>
+                    <h1 id="hba1clevel"></h1>
+                   </div>
+ 
+                </div>
+                <small>Last 24 Hours</small>
+                <p id="hemowm" class="warning"></p>
+             </div>
+            <!-- end seling -->
+               <!-- start seling -->
+               <div class="income">
+                <span class="material-symbols-sharp">favorite</span>
+                <div class="middle">
+ 
+                  <div class="left">
+                    <h3>Blood pressure (mmHg)</h3>
+                    
+                  </div>
+                   <div>
+                    <h1 id="bplevel"></h1>
+                   </div>
+ 
+                </div>
+                <small>Last 24 Hours</small>
+                <p id="bpwm" class="warning"></p>
+             </div>
+            <!-- end seling -->
+            <div class="sales">
+              <span class="material-symbols-sharp">accessibility_new</span>
+              <div class="middle">
+
+                <div class="left">
+                  <h3>BMI (kg/>m^2)</h3>
+                  
+                </div>
+                 <div>
+                  <h1 id="bmilevel" style="color: black;"></h1>   
+                 </div>
+
+              </div>
+              <small>Last 24 Hours</small>
+              <p id="bmiwm" class="warning"></p>
+           </div>
+           <div class="sales">
+            <span class="material-symbols-sharp">exercise</span>
+            <div class="middle">
+
+              <div class="left">
+                <h3>Exercise (hr/day)</h3>
+              </div>
+               <div>
+                <h1 id="exerciselevel" style="color: black;"></h1>
+               </div>
+
+            </div>
+            <small>Last 24 Hours</small>
+            <p id="exwm" class="warning"></p>
+         </div>
+         <div class="sales">
+          <span class="material-symbols-sharp">glucose</span>
+          <div class="middle">
+
+            <div class="left">
+              <h3>Insulin (units/day)</h3>
+            </div>
+             <div>
+                 <h1 id="insulinlevel" style="color: black;"></h1>
+             </div>
+
+          </div>
+          <small>Last 24 Hours</small>
+          <p id="insulinwm" class="warning"></p>
+       </div>
+        </div>
+       <!-- end insights -->
+      
+
+      </main>
+      <main class="aitreatmentmain" id="aitreatmentmain">
+        <h1>Generate AI-Reports</h1>
+        <button class="newreportbtn" id="newreport">New Report +</button>
+        <div class="loader" id="loader" style="display: none;">
+          <p class="loadingblink">Loading.....</p>
+        </div>
+        
+      </main>
+      <main class="reportsmain" id="reportsmain">
+        <h1>Download Reports</h1>
+      
+
+      <div class="recent_order">
+        <h2>This week</h2>
+        <table> 
+            <thead>
+             <tr>
+               <th>So.No</th>
+               <th>Report Name</th>
+               <th>Date</th>
+               <th>Time</th>
+               <th>Download</th>
+             </tr>
+            </thead>
+             <tbody id="tablebody">
+                
+             </tbody>
+        </table>
+     </div>
+    </main>
+  </div>
+      <!------------------
+         end main
+        ------------------->
+
+  
+     
+
+
+
+  
+<script src="src/script.js"></script>  
+
+</body>
+</html>
